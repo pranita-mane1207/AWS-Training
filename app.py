@@ -3,8 +3,6 @@ from flask import Flask, render_template
 import boto3
 import os
 # Set environment variables
-#os.environ['S3_KEY'] = "AKIAQ4IWYKPL6AWTVMDF"
-#os.environ['S3_SECRET'] = "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"
 # Get environment variables
 #S3_KEY = os.environ.get('S3_KEY')
 #S3_SECRET = os.environ.get('S3_SECRET')
