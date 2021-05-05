@@ -10,3 +10,28 @@ select instance type "t2.micro" free tier
 select Add storage size 8 GiB
 Tag key name and configure security group TCP and port number 8085
 Screen shot of Billing Report.
+
+### Set up Virtual Environment
+Ubuntu 20.04LTS
+$sudo apt-get update
+
+### AWS Installation and Configuration
+$ sudo apt install awscli
+$ aws --version: aws-cli/1.18.69 Python/3.8.5 Linux/4.4.0-19041-Microsoft botocore/1.16.19 
+$ sudo chmod 400 pranita.pem 
+$ ssh -i pranita.pem ubuntu@ec2-3-6-40-36.ap-south-1.compute.amazonaws.com
+$ aws configure 
+AWS Access Key ID [****************VMDF]: "AKIAQ4IWYKPL6AWTVMDF"
+AWS Secret Access Key [****************V7HP]: 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
+Default region name [Asia Pacific (Mumbai)ap-south-1]: ap-south-1
+Default output format [JSON]: json
+
+$ sudo apt install pipenv
+$ pipenv install --three
+$ pipenv shell
+$ pipenv install flask
+$ pipenv install boto3
+$ pipenv flask_bootstrap
+$ sudo nano app.py
+$ python app.py
+
